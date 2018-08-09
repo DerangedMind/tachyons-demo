@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+candies = ['Jolly Rancher', 'Lemonhead', 'Tootsie Roll']
+
+candies.each do |candy|
+  Candy.create(name: candy, description: "#{candy.pluralize} are the best!")
+end

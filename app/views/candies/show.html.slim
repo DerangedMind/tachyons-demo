@@ -1,0 +1,11 @@
+p#notice = notice
+
+.mh2.mv3.ph2.pv3.bg-blue.near-white.br1
+  .f4.fw4.mh2.mv2
+    = @candy.name
+  .f6.mh2.mv3
+    = @candy.description
+
+=> link_to 'Edit', edit_candy_path(@candy)
+'|
+=< link_to 'Back', candies_path

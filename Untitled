@@ -1,0 +1,29 @@
+.btn-white {
+  background-color: #fff;
+}
+
+.btn-white:hover {
+  background-color: #aaa;
+}
+
+.test {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav
+  .title
+  .buttons
+    .settings
+      | Settings
+    .logout
+      | Logout

@@ -1,0 +1,28 @@
+.w-100.h5.pv2.bg-candy.flex.justify-center.items-center
+  .f2.lh-subheadline.ma2.ph4.pv3.br3.bg-white-40
+    | Candy Mountain
+  .f4.lh-
+
+
+.flex.flex-wrap-l.flex-column.flex-row-l.pa5-l.hot-pink.bg-dark-blue.pv2.justify-center
+  - @candies.each do |candy|
+    article.flex.flex-column.items-center.w-100.w5-l.mh3-l.mv2.pa3.bg-navy.br2.grow.pointer
+      .f2.lh-title.mv2.flex-auto
+        = candy.name
+      .f4.lh-copy.mv3.flex-auto
+        = candy.description
+      .flex.justify-around
+        .link.pa2
+          = link_to 'Show', candy,
+            class: "pa2 hot-pink link fw7 f7"
+        .link.pa2
+          = link_to 'Edit', edit_candy_path(candy),
+            class: "pa2 hot-pink link fw7 f7"
+        .link.pa2
+          = link_to 'Destroy', candy,
+            class: "pa2 hot-pink link fw7 f7",
+            data: { confirm: 'Are you sure?' },
+            method: :delete
+
+
+= link_to 'New Candy', new_candy_path
